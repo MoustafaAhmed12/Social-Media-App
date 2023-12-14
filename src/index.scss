@@ -1,0 +1,130 @@
+html {
+  font-size: 14px;
+}
+
+header {
+  padding: 10px 0 10px 13%;
+  width: 29%;
+  height: 100%;
+  a {
+    all: unset;
+  }
+  .links {
+    height: fit-content;
+    line-height: 50px;
+    a {
+      width: fit-content;
+      display: flex;
+      align-items: center;
+      padding: 8px 25px 8px 8px;
+      &:hover {
+        background-color: rgb(47, 51, 54);
+        border-radius: 9999px;
+        cursor: pointer;
+      }
+      &.active {
+        font-weight: 800;
+      }
+      &:first-child {
+        padding: 8px 8px;
+      }
+    }
+  }
+  .main-account {
+    height: 30%;
+    padding-top: 130px;
+    margin-right: 50px;
+    a {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 10px 8px 15px;
+      .img-account {
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        background-color: wheat;
+      }
+      div {
+        flex-basis: 90%;
+        margin-left: 10px;
+      }
+      &:hover {
+        background-color: rgb(47, 51, 54);
+        border-radius: 9999px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+main {
+  width: 71%;
+  height: 100%;
+  margin-left: 29%;
+  .main-flex {
+    display: flex;
+    width: 100%;
+      .main-feed {
+        width: 65%;
+        border-left: 1px solid rgb(47, 51, 54);
+        border-right: 1px solid rgb(47, 51, 54);
+        .feed-post{
+            min-height: 100px;
+            padding: 1rem;
+            border-top: 1px solid rgb(47, 51, 54);
+            cursor: pointer;
+            img{
+                 width: 38px;
+        height: 38px;
+        border-radius: 50%;
+            }
+        }
+      }
+      .friends{
+        width: calc(100% - 65%);
+      }
+  }
+}
+
+@media screen and (max-width: 1260px) {
+
+    header{
+        width: 10%;
+        padding: 16px 0 0 2%
+    }
+
+    .links a {
+            padding: 8px !important;
+            margin: 8px 0;
+    }
+    main{
+        margin-left: 10%;
+        width: 90%;
+    }
+
+    header span {
+        display: none;
+    }
+
+    header .main-account {
+        display: flex;
+        justify-content: center;
+    }
+
+    header .main-account .icon {
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width: 790px) {
+
+    .friends{ 
+        display: none;
+    }
+    .main-feed{
+        width: 90% !important;
+    }
+    
+}
